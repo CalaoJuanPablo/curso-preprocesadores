@@ -69,6 +69,56 @@ header a {
 	font-style: italic;
 }
 
+.reto {
+	display: grid;
+	height: calc(100vh - 200px);
+	min-height: 500px;
+	grid-template-columns: 300px 1fr;
+}
+
+.reto aside {
+	padding-top: 90px;
+	padding-left: 60px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	background-color: #EEF1F7;
+}
+
+.reto aside h1 {
+	font-size: 38px;
+}
+
+.reto aside .menu ul {
+	list-style: none;
+	padding: 0;
+}
+
+.reto aside .menu ul li {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	color: #012179;
+	font-size: 20px;
+}
+
+.reto main {
+	padding-top: 90px;
+	padding-left: 90px;
+	padding-right: 120px;
+	padding-bottom: 90px;
+}
+
+.reto main h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.reto main p {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
 .boton {
 	display: block;
 	width: 200px;
