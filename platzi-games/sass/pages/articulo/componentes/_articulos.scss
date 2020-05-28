@@ -1,0 +1,17 @@
+.articulo--principal {
+	max-width: 660px;
+	margin: 0 auto;
+	&__intro {
+		@include fuente(25px);
+	}
+	h2 {
+		margin: 40px 0;
+		text-align: center;
+		@include fuente(50px);
+		@include titulos($fuente2);
+	}
+	h3 {
+		color: $color-secundario;
+		@include titulos($fuente2);
+	}
+}
