@@ -36,6 +36,13 @@ $color-variacion: #3f579a;
 	line-height: $fontSize + ($fontSize * 0.3);
 }
 
+@mixin contenedor() {
+	display: flex;
+	width: 90%;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+
 // Funciones
 @function get-opacity($color, $nivel) {
 	@return rgba($color, $nivel);
