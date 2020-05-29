@@ -7,28 +7,29 @@
 	border-bottom: 1px solid #ebebeb;
 }
 
-.nav--header {
+.nav--header ul {
 	padding-top: 35px;
-	ul {
+	display: none;
+	margin: 0;
+	li {
+		list-style: none;
+		margin-right: 50px;
+	}
+	a {
+		color: $color-variacion;
+		text-decoration: none;
+		@include titulos($fuente2);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	@include media(desktop-s) {
 		display: flex;
-		margin: 0;
-		li {
-			list-style: none;
-			margin-right: 50px;
-		}
-		a {
-			color: $color-variacion;
-			text-decoration: none;
-			@include titulos($fuente2);
-			&:hover {
-				text-decoration: underline;
-			}
-		}
 	}
 }
 
 .header__busqueda {
-	display: flex;
+	display: none;
 	margin-left: auto;
 	padding-top: 35px;
 	text-decoration: none;
@@ -43,5 +44,8 @@
 	span {
 		color: $color-variacion;
 		@include titulos($fuente2);
+	}
+	@include media(desktop-s) {
+		display: flex;
 	}
 }

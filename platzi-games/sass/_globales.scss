@@ -9,6 +9,16 @@ $color-claro: #ffffff;
 $color-secundario: #8841da;
 $color-variacion: #3f579a;
 
+// Funciones
+@function get-opacity($color, $nivel) {
+	@return rgba($color, $nivel);
+}
+
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
 // Mixins
 @mixin caja {
 	border-radius: 20px;
@@ -43,9 +53,10 @@ $color-variacion: #3f579a;
 	padding: 30px 0;
 }
 
-// Funciones
-@function get-opacity($color, $nivel) {
-	@return rgba($color, $nivel);
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+	line-height: calculateRem($size) * 1.5;
 }
 
 // Loop
@@ -62,7 +73,8 @@ $color-variacion: #3f579a;
 
 body {
 	margin: 0;
-	@include titulos($fuente1)
+	@include titulos($fuente1);
+	@include font-size(18px);
 }
 
 main {
